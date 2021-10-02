@@ -1,0 +1,225 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(28, 33, 39);
+}
+header{
+    display: flex;
+    background-color: rgb(44, 51, 59);
+    width: 100%;
+    height: 8vh;
+    justify-content: space-between;
+}
+#nav{
+    margin-top: 1.3vh;
+    margin-right: 1vh;  
+}
+#nav li{
+    font-family: 'Kanit', sans-serif;
+}
+.title-head{
+  font-family: 'Bebas Neue', cursive;
+  font-style: italic;
+  color: white;
+  margin-left: 2vh;
+  margin-top: 1vh;
+  letter-spacing: 3px;
+}
+.title-head strong{
+  color: rgb(204, 0, 187);
+}
+a{
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+a:hover{
+  background: rgba(0, 0, 0, .05);
+}
+#logo{
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: 'Barlow', sans-serif;
+  }
+#header{
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(28,33,39);   
+}
+#menu{
+  display: flex;
+  font-size: 1.1rem;
+  list-style: none;
+  gap: .5rem;
+}
+#menu a{
+  display: block;
+  padding: .5rem;
+  font-family: 'Barlow', sans-serif;
+}
+#btn-mobile{
+  display: none;  
+}
+.produtos{
+  display: flex;
+  justify-content: space-around; 
+}
+.fila2{
+  margin-top: 30px;
+}
+.anuncio{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0vh 0vh 4vh 0vh;
+  font-family: 'Kanit', sans-serif;
+  text-shadow: 3px 2px 2px rgba(150, 0, 137, 0.664);
+}
+.box{
+  width: 32vh;
+  height: 32vh;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  transition: 0.5s;
+}
+.box:hover{
+  border: 1px solid rgb(204, 0, 187);
+  box-shadow: 5px 5px 2px rgb(150, 0, 137);
+  transform: scale(1.1);
+}
+.box-img{
+  width: auto;
+  height: 24vh;
+  background-color: blue;
+}
+.preço{
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-family:'Kanit', sans-serif;
+  font-weight: normal;
+  justify-content: space-around;
+}
+.btn-comprar{
+  width: 15vh;
+  height: 2rem;
+  border:none;
+  background-color: rgb(150, 0, 137);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+.btn-comprar:hover{
+  background-color: rgb(212, 0, 195);
+}
+.motivo{
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(140, 201, 252);
+}
+footer{
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  margin-top: 10vh;
+  background-color: rgb(20, 21, 22);
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-text{
+  color: rgb(196, 196, 196);
+  font-family: arial;
+  font-size: 1rem;
+}
+  @media (max-width: 800px){
+    #btn-mobile{
+        display: block;
+        padding: .5rem;
+      }
+      #nav{
+        margin-top: 3px;
+      }
+      #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: rgb(28,33,39);
+        height: 0;
+        transition: .4s;
+        z-index: 1000000000;
+        visibility: hidden;
+        overflow-y: hidden;
+        
+      }
+      #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+      }
+      #menu a {
+        padding: 1rem;
+        margin: 0 .1rem;
+        border-bottom: 2px solid rgba(0, 0, 0,.05);
+      }
+      .hamburger-menu {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        height: 2.5rem;
+        width: 2.5rem;
+        cursor: pointer;
+      }
+      
+      .hamburger-menu .bar {
+        height: 5px;
+        background: black;
+        border-radius: 5px;
+        margin: 3px 0px;
+        transform-origin: left;
+        transition: all 0.4s;
+      }
+      
+      #nav.active .hamburger-menu:hover .top {
+        transform: rotate(45deg);
+      }
+      
+      #nav.active .hamburger-menu:hover .middle {
+        opacity: 0;
+      }
+      
+      #nav.active .hamburger-menu:hover .bottom {
+        transform: rotate(-45deg);
+    }
+  .box{
+    width: 35vh;
+    margin: 15px 0px;
+
+  }
+  .produtos{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: -4px -4px;
+  }
+  .fila1{
+    margin: 0;
+    justify-content: space-between;
+  }
+  .fila2{
+    margin: 0;
+  }
+  }
