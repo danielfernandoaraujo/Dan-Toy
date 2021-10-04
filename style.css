@@ -11,7 +11,7 @@ header{
     display: flex;
     background-color: rgb(44, 51, 59);
     width: 100%;
-    height: 6vh;
+    min-height: 8vh;
     justify-content: space-between;
 }
 #nav{
